@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 15s # How frequently to scrape targets
+
+# define kiya hai ki kis ko target krna hai
+scrape_configs:
+  - job_name: 'bun-app'
+    static_configs:
+    # in the target you have to give name of the container
+      - targets: ['bun-app:3000']
+      # for protecting /metric route  
+    basic_auth:
+      username: "chirag"
+      password: "chirag@1711"
+
+  # - job_name: "frontend-app"
+  #   static_configs:  
+      # -target: ['localhost:3001']

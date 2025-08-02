@@ -1,6 +1,6 @@
-import { requestCounter } from "./requestCount";
-import {httpRequestDurationMicroseconds} from "./requestTime";
-import {activeRequestsGauge} from "./activeCount";
+import { requestCounter } from "./metrics/requestCount";
+import {httpRequestDurationMicroseconds} from "./metrics/requestTime";
+import {activeRequestsGauge} from "./metrics/activeCount";
 import type { Request, Response, NextFunction } from "express";
 
 export default function metricsMiddleware(req:Request, res:Response, next:NextFunction){
